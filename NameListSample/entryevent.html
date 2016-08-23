@@ -3,116 +3,48 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>イベント情報登録</title>
-<meta name="keywords" content="ホームページのキーワードを入れてください" />
-<meta name="description" content="ホームページの紹介文を入れてください" />
-<meta http-equiv="content-script-type" content="text/javascript" />
-<meta http-equiv="content-style-type" content="text/css" />
-<meta http-equiv="imagetoolbar" content="no" />
+
 <!-- 外部CSS読み込み -->
-<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/entryevent.css" rel="stylesheet" type="text/css" />
 <!-- /ここまで -->
 </head>
 
-<body>
+<form method="post" action="#" class="contact">
 
-	<div id="container">
+<p>以下のフォームにイベント情報をご入力ください。</p>
 
-		<div id="head">
-			<h1>キーワードをいれてください</h1>
-			<h2><a href="./">イベント情報登録</a></h2>
-		</div>
-		<div id="head_menu">
-			<a href="./">HOME</a>｜
-			<a href="contents01.html">コンテンツ1</a>｜
-			<a href="contents01.html">コンテンツ2</a>｜
-			<a href="contents01.html">コンテンツ3</a>｜
-			<a href="contents01.html">コテンツ4</a>｜
-			<a href="contents01.html">メニューは増減が可能です</a>｜
-		</div>
 
-		<div id="contents">
+<table>
+<tbody>
+<tr>
+<th><label for="company">日時</label></th>
+<td class="required"></td>
+<td><input type="date" name="Edate"><br></td>
+</tr>
+<tr>
+<th><label for="section">イベント名</label></th>
+<td class="required"></td>
+<td><input type="text" name="section" id="section" size="50"><br>
+</td>
+</tr>
+<tr>
+<th><label for="name">場所</label></th>
+<td class="required"></td>
+<td><input type="text" name="name" id="name" size="50"><br>
+</td>
+</tr>
+<tr>
 
-			<h3>ようこそpop-02へ</h3>
-			<h4>レイアウトパターンを組み合わせていろいろなレイアウトをよりかんたんに</h4>
-			<h5>パターンA</h5>
-			<div class="typeA">
-				<p>
-					テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-					テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-				</p>
-				<p>
-					テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-					テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-				</p>
-			</div>
-			<h5>パターンA応用</h5>
-			<div class="typeA">
-				<p>
-					テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-					テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-				</p>
-				<p><img src="img/common/sample_pic.gif" alt="サンプル" width="465" height="104" /></p>
-			</div>
-			<h4>横並びのレイアウトもかんたん</h4>
-			<h5>パターンB</h5>
-			<div class="typeB">
-				<div class="left">
-					<p>
-						テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-						テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-					</p>
-				</div>
-				<div class="right">
-					<p><img src="img/common/sample_pic02.gif" alt="サンプル画像" width="300" height="104" /></p>
-				</div>
-			</div>
-			<h5>パターンB応用</h5>
-			<div class="typeB">
-				<div class="left">
-					<p><img src="img/common/sample_pic02.gif" alt="サンプル画像" width="300" height="104" /></p>
-				</div>
-				<div class="right">
-					<p>
-						テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-						テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-					</p>
-				</div>
-			</div>
-			<h5>パターンB応用2</h5>
-			<div class="typeB">
-				<div class="left">
-					<p>
-						テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-						テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-					</p>
-				</div>
-				<div class="right">
-					<p>デザインされた表の挿入もかんたん</p>
-					<table id="tbl_setA" width="98%">
-						<tr>
-							<th>サイトA</th>
-							<td>★★★★</td>
-						</tr>
-						<tr>
-							<th>サイトB</th>
-							<td>★★★★</td>
-						</tr>
-						<tr>
-							<th>サイトC</th>
-							<td>★★★</td>
-						</tr>
-						<tr>
-							<th>サイトD</th>
-							<td>★★</td>
-						</tr>
-					</table>
-				</div>
-			</div>
+<th><label for="message">説明文</label></th>
+<td class="required"></td>
+<td><textarea name="message" id="message" rows="5" cols="40"></textarea></td>
+</tr>
+</tbody>
+</table>
 
-		</div><!-- contents end -->
-	</div><!-- container end -->
+<p class="button"><input type="submit" value="入力内容の確認画面へ"></p>
 
-	<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>
+</form>
 
 </body>
 </html>
