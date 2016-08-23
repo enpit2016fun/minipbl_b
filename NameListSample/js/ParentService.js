@@ -1,5 +1,4 @@
 ﻿var ParentService = function () {
-
     this.initialize = function() {
         var deferred = $.Deferred();
         // Store sample data in Local Storage
@@ -13,7 +12,6 @@
         deferred.resolve();
         return deferred.promise();
     }
-
     this.findById = function (id) {
 
         var deferred = $.Deferred(),
@@ -42,5 +40,14 @@
         deferred.resolve(results);
         return deferred.promise();
     }
+// 全レコードを獲得
+	this.getAll = function () {
+		parents = JSON.parse(window.localStorage.getItem("parent"));
+		return parents
+	}
+// 全レコードを置き換え
+	this.putALL = function (parents) {
+		window.localStorage.setItem("parent", JSON.stringify(parents));
+	}
 
-
+}

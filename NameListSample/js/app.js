@@ -28,8 +28,9 @@
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByEmail() {
         service.findByEmail($('.search-key').val()).done(function (parent) {
+alert("AA");
             var l = parent.length;
-            var e;
+            var p;
             $('.parent-list').empty();
             for (var i = 0; i < l; i++) {
                 p = parent[i];
