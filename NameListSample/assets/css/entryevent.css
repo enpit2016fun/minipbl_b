@@ -7,10 +7,6 @@ font-size: 80%;
 form.contact p {
 line-height: 130%;
 }
-/* --- 段落内の「必須」画像 --- */
-form.contact p.attention img {
-vertical-align: middle;
-}
 
 /* --- テーブル --- */
 form.contact table {

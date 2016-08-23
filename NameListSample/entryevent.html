@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script src="js/entryevent.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>イベント情報登録</title>
 
@@ -9,7 +10,7 @@
 <!-- /ここまで -->
 </head>
 
-<form method="post" action="#" class="contact">
+<form method="post" action="#" class="contact" id="id_form1">
 
 <p>以下のフォームにイベント情報をご入力ください。</p>
 
@@ -19,18 +20,18 @@
 <tr>
 <th><label for="company">日時</label></th>
 <td class="required"></td>
-<td><input type="date" name="Edate"><br></td>
+<td><input type="date" name="Edate" id="Date"><br></td>
 </tr>
 <tr>
 <th><label for="section">イベント名</label></th>
 <td class="required"></td>
-<td><input type="text" name="section" id="section" size="50"><br>
+<td><input type="text" name="section" id="Ename" size="50"><br>
 </td>
 </tr>
 <tr>
 <th><label for="name">場所</label></th>
 <td class="required"></td>
-<td><input type="text" name="name" id="name" size="50"><br>
+<td><input type="text" name="name" id="place" size="50"><br>
 </td>
 </tr>
 <tr>
@@ -42,7 +43,10 @@
 </tbody>
 </table>
 
-<p class="button"><input type="submit" value="入力内容の確認画面へ"></p>
+<p class="button"><input type="submit" value="入力内容の確認画面へ" ></p>
+<input type="button" value="ストレージに保存" onClick="set()">
+
+<div id="show_result"></div>
 
 </form>
 
