@@ -1,4 +1,4 @@
-﻿var ParentService = function () {
+﻿var ChildService = function () {
     this.initialize = function() {
         var deferred = $.Deferred();
         // Store sample data in Local Storage
@@ -33,7 +33,7 @@
         return deferred.promise();
     }
 // parent_id に含まれる文字で検索する例
-    this.findByParent = function (searchKey) {
+    this.findByParentId = function (searchKey) {
         var deferred = $.Deferred(),
             children = JSON.parse(window.localStorage.getItem("child")),
             results = children.filter(function (element) {
@@ -43,5 +43,5 @@
         deferred.resolve(results);
         return deferred.promise();
     }
-
+}
 
