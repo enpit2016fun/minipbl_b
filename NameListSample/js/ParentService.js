@@ -17,13 +17,13 @@
     this.findById = function (id) {
 
         var deferred = $.Deferred(),
-            parent = JSON.parse(window.localStorage.getItem("parent")),
+            parents = JSON.parse(window.localStorage.getItem("parent")),
             parent = null,
-            l = parent.length;
+            l = parents.length;
 
         for (var i = 0; i < l; i++) {
-            if (parent[i].id === id) {
-                parent = parent[i];
+            if (parents[i].id === id) {
+                parent = parents[i];
                 break;
             }
         }
@@ -34,8 +34,8 @@
 // email アドレスに含まれる文字で検索する例
     this.findByEmail = function (searchKey) {
         var deferred = $.Deferred(),
-            parent = JSON.parse(window.localStorage.getItem("parent")),
-            results = parent.filter(function (element) {
+            parents = JSON.parse(window.localStorage.getItem("parent")),
+            results = parents.filter(function (element) {
                 var emailaddr = element.email;
                 return emailaddr.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
             });
@@ -44,4 +44,3 @@
     }
 
 
-}
