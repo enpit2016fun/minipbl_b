@@ -7,10 +7,6 @@
     service.initialize().done(function () {
         console.log("Service initialized");
     });
-    var childService = new ChildService();
-    childService.initialize().done(function () {
-        console.log("ChildService initialized");
-    });
 
     /* --------------------------------- Event Registration -------------------------------- */
     // メールアドレス検索キーワード（一文字）の入力時に動くメソッドの登録
@@ -38,18 +34,6 @@
             for (var i = 0; i < l; i++) {
                 p = parent[i];
                 $('.parent-list').append('<li><a href="#parent/' + p.id + '">' + p.firstName + ' ' + p.lastName +'</a>' + ' : ' + p.email + ' ' + '</li>');
-            }
-        });
-    }
-
-    function findByParent() {
-        childService.findByParent($('.search-key').val()).done(function (child) {
-            var l = child.length;
-            var c;
-            $('.child-list').empty();
-            for (var i = 0; i < l; i++) {
-                c = child[i];
-                $('.child-list').append('<li><a href="#child/' + c.id + '">' + c.firstName + ' ' + c.lastName +'</a>' + '</li>');
             }
         });
     }
