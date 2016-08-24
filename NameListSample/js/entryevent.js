@@ -14,7 +14,7 @@ function set() {
   var Emessage = document.forms.id_form1.Emessage.value;
   var event = date + ", " + Ename + ", " + Eplace + ", " + Emessage; 
   storage.setItem(key, event);
-  show_result();
+  //show_result();
 }
 
 //データをクリアする
@@ -36,3 +36,16 @@ function show_result() {
   //上のループで作成されたテキストを表示する
   document.getElementById("show_result").innerHTML = result;
 }
+
+//アラートを表示する関数
+function art(){
+
+	// 「OK」時の処理開始 ＋ 確認ダイアログの表示
+	if(window.confirm("イベントを登録してもよろしいですか？")){
+
+		location.href = "トップ画面.html"; // example_confirm.html へジャンプ
+		set();
+	}
+
+}
+
