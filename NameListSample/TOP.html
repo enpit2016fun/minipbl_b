@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script src="js/top.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ホームページの名前を入れてください</title>
 <meta name="keywords" content="ホームページのキーワードを入れてください" />
@@ -14,12 +15,11 @@
 <script type="text/javascript" src="js/default.js"></script>
 </head>
 
-<body>
+<body onLoad="show_result()">
 
 	<div id="container">
 
 		<div id="head">
-			<h1>キーワードをいれてください</h1>
 			<h2><a href="./">つくしの子保育園</a></h2>
 		</div>
 		<div id="head_menu">
@@ -27,7 +27,7 @@
 			<a href="entryevent.html">イベント情報登録</a>｜
 			<a href="sendmail.html">メール送信画面</a>｜
 			<a href="changeevent.html">イベントの変更</a>｜
-			<a href="entryuser.html">ユーザー登録</a>｜
+			<a href="entryuser.html">名簿メンテナンス</a>｜
 			<a href="contents01.html">メニューは増減が可能です</a>｜
 		</div>
 
@@ -53,26 +53,8 @@
 				<h4>イベントのインフォメーション</h4>
 
 				<div id="info">
-					<h5>2016/05/●●</h5>
-					<p>運動会</p>
-					<p>場所：●●小学校</p>
-					<p>説明文：テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト</p>
-
-
-					<h5>2016/06/19</h5>
-					<p>バザー</p>
-					<p>場所：●●小学校</p>
-					<p>説明文：テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト</p>
-
-					<h5>2016/09/10</h5>
-					<p>つくしっ子まつり</p>
-					<p>場所：●●小学校</p>
-					<p>説明文：テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト</p>
-
-					<h5>2016/10/02</h5>
-					<p>運動会</p>
-					<p>場所：●●小学校</p>
-					<p>説明文：テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト</p>
+					<div id="show_result"></div>
+					
 				</div>
 
 				<h4>つくしの子保育園</h4>
@@ -105,7 +87,7 @@
 
 	</div><!-- container end -->
 
-	<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>
+	<!-- <div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div> -->
 
 </body>
 </html
