@@ -10,7 +10,7 @@
 <!-- /ここまで -->
 </head>
 
-<form method="post" action="#" class="contact" id="id_form1">
+<form method="post" action="entryeventcheck.html" class="contact" id="id_form1">
 
 <p>以下のフォームにイベント情報をご入力ください。</p>
 
@@ -20,30 +20,30 @@
 <tr>
 <th><label for="company">日時</label></th>
 <td class="required"></td>
-<td><input type="date" name="Edate" id="Date"><br></td>
+<td>%Edate%<br></td>
 </tr>
 <tr>
 <th><label for="section">イベント名</label></th>
 <td class="required"></td>
-<td><input type="text" name="section" id="Ename" size="50"><br>
+<td>%section%<br>
 </td>
 </tr>
 <tr>
 <th><label for="name">場所</label></th>
 <td class="required"></td>
-<td><input type="text" name="name" id="place" size="50"><br>
+<td>%name%<br>
 </td>
 </tr>
 <tr>
 
 <th><label for="message">説明文</label></th>
 <td class="required"></td>
-<td><textarea name="message" id="Emessage" rows="5" cols="40"></textarea></td>
+<td>!!!message!!!</td>
 </tr>
 </tbody>
 </table>
 
-<p class="button"><input type="submit" value="入力内容の確認画面へ" ></p>
+<p class="button"><input type="submit" value="entryeventcheck.html" ></p>
 <input type="button" value="ストレージに保存" onClick="set()"> 
 
 <div id="show_result"></div>

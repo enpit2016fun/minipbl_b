@@ -1,11 +1,17 @@
 //変数storageにlocalStorageを格納
 var storage = localStorage;
+var a = 0; 
 
 //データを保存する
 function set() {
-  var k = document.forms.id_form1.Ename.value;
-  var v = document.forms.id_form1.place.value;
-  storage.setItem(k, v);
+  a++;
+  var key = "event"
+  var date = document.forms.id_form1.Edate.value;
+  var Ename = document.forms.id_form1.Ename.value;
+  var Eplace = document.forms.id_form1.place.value;
+  var Emessage = document.forms.id_form1.Emessage.value;
+  var event = date + ", " + Ename + ", " + Eplace + ", " + Emessage; 
+  storage.setItem(key, event);
   show_result();
 }
 
