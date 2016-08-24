@@ -2,7 +2,7 @@
 <html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>宛先表示画面</title>
+<title>宛先リスト表示画面</title>
 <meta name="keywords" content="ホームページのキーワードを入れてください" />
 <meta name="description" content="ホームページの紹介文を入れてください" />
 <meta http-equiv="content-script-type" content="text/javascript" />
@@ -15,104 +15,86 @@
 
 <body>
 
+<Div Align="center">
+<p><img src="assets/img/common/cool_02bk.lzh.gif" alt="サンプル画像" width="1000" height="150" /></p>
+<p><img src="assets/img/common/bg_menu.jpg" alt="サンプル画像" width="800" height="20" /></p>
+
+
   <div id="container">
 
     <div id="head">
-      <h1>キーワードをいれてください</h1>
-      <h2><a href="./">宛先表示画面</a></h2>
-    </div>
-    <div id="head_menu">
-      <a href="./">HOME</a>｜
-      <a href="contents01.html">コンテンツ1</a>｜
-      <a href="contents01.html">コンテンツ2</a>｜
-      <a href="contents01.html">コンテンツ3</a>｜
-      <a href="contents01.html">コンテンツ4</a>｜
-      <a href="contents01.html">メニューは増減が可能です</a>｜
-    </div>
+      <h1>宛先リスト表示画面</h1>
+     <!-- <h2>イベント</h2> -->
+<table cellspacing="10">
+  
+  <thead style="background:#ffccff">
+   <tr>
+    <th>イベント名</th>
+    <th>日時</th>
+    <th>場所</th>
+    <th>説明文</th>
+   </tr>
+  </thead>
+  <tfoot style="background:#eeeeee">
+   <tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+   </tr>
+  </tfoot>
+  <tbody>
+   
+  <!-- <tr>
+   <form method="get" action="sendmail_result.html">
+    <td><p><input type="text" readonly="readonly" name="event" value="バザー" /></p></td>
+    <td><p><input type="text" readonly="readonly" name="time" value="6月19日(日)" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="place" value="○○小学校" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="detail" value="あああああああああああああ" /></p></td>
+    </form>
+    </tr>
+    -->
 
+ <tr>
+   <form method="post" action="mail.html">
+    <td><p><CENTER>バザー</CENTER></p></td>
+    <td><p><CENTER>6月19日(日)</CENTER></p></td>
+    <td><p><CENTER>○○小学校</CENTER></p></td>
+    <td><p><CENTER>あああああああああああああ</CENTER></p></td>
+    </form>
+   </tr>
+
+
+</tbody>
+</table>
+
+
+    </div>
+    
     <div id="contents">
 
-      <h3>ようこそpop-02へ</h3>
-      <h4>レイアウトパターンを組み合わせていろいろなレイアウトをよりかんたんに</h4>
-      <h5>パターンA</h5>
-      <div class="typeA">
-        <p>
-          テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-          テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-        </p>
-        <p>
-          テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-          テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-        </p>
-      </div>
-      <h5>パターンA応用</h5>
-      <div class="typeA">
-        <p>
-          テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-          テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-        </p>
-        <p><img src="img/common/sample_pic.gif" alt="サンプル" width="465" height="104" /></p>
-      </div>
-      <h4>横並びのレイアウトもかんたん</h4>
-      <h5>パターンB</h5>
-      <div class="typeB">
-        <div class="left">
-          <p>
-            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-          </p>
-        </div>
-        <div class="right">
-          <p><img src="img/common/sample_pic02.gif" alt="サンプル画像" width="300" height="104" /></p>
-        </div>
-      </div>
-      <h5>パターンB応用</h5>
-      <div class="typeB">
-        <div class="left">
-          <p><img src="img/common/sample_pic02.gif" alt="サンプル画像" width="300" height="104" /></p>
-        </div>
-        <div class="right">
-          <p>
-            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-          </p>
-        </div>
-      </div>
-      <h5>パターンB応用2</h5>
-      <div class="typeB">
-        <div class="left">
-          <p>
-            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト<br />
-            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト
-          </p>
-        </div>
-        <div class="right">
-          <p>デザインされた表の挿入もかんたん</p>
-          <table id="tbl_setA" width="98%">
-            <tr>
-              <th>サイトA</th>
-              <td>★★★★</td>
-            </tr>
-            <tr>
-              <th>サイトB</th>
-              <td>★★★★</td>
-            </tr>
-            <tr>
-              <th>サイトC</th>
-              <td>★★★</td>
-            </tr>
-            <tr>
-              <th>サイトD</th>
-              <td>★★</td>
-            </tr>
-          </table>
-        </div>
-      </div>
+    <h3>宛先リスト</h3>
+    <p><CENTER>ああああああ</CENTER></p>
+    <p><CENTER>いいいいいい</CENTER></p>
+    <p><CENTER>うううううううう</CENTER></p>
+    <p><CENTER>えええええええ</CENTER></p>
+    <p><CENTER>おおおおおお</CENTER></p>
+    <p><CENTER>かかかかかか</CENTER></p>
+    <p><CENTER>ききききききき</CENTER></p>
+
+
+    <!-- <p><input type="submit" value="確認"></p> -->
+
+
+<a href="mailto:info@example.com"><p><input type="submit" value="確認"></p></a>
+   
+      
 
     </div><!-- contents end -->
   </div><!-- container end -->
 
-  <div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>
+  <!--<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>  -->
+  </Div>
 
 </body>
 </html>
