@@ -4,10 +4,10 @@
     /* ---------------------------------- Local Variables ---------------------------------- */
     // ParentService(js/ParentService.js)オブジェクトの生成
     var service = new ParentService();
+
     service.initialize().done(function () {
         console.log("Service initialized");
     });
-
     /* --------------------------------- Event Registration -------------------------------- */
     // メールアドレス検索キーワード（一文字）の入力時に動くメソッドの登録
     $('.search-key').on('keyup', findByEmail);
@@ -18,12 +18,17 @@
 		l = parents.length;
 		var new_elt = $.extend(true, {}, parents[l-1]);
 		new_elt.id = l+1;
-		new_elt.firstName ="星野";
-		new_elt.lastName = new_elt.id + "郎";
+		new_elt.firstName ="つくしの子";
+		new_elt.lastName = "保護者様" + new_elt.id;
+		new_elt.email = "TsukushiNoko" + new_elt.id + "@fakeemail.com";
 		parents.push(new_elt);
-		service.putALL(parents)
+		service.putAll(parents)
     });
-	
+
+	// 保護者データの初期化
+	$('.dataInit-btn').on('click', function() {
+		service.dataInitialize();
+    });
 
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByEmail() {
