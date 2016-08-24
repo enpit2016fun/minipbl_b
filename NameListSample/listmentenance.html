@@ -20,7 +20,7 @@
 
 		<div id="head">
 			<!--<h1>キーワードをいれてください</h1>-->
-			<h2><a href="./">子供確認画面</a></h2>
+			<h2><a href="./">確認画面</a></h2>
 		</div>
 		<div id="head_menu">
 			<a href="トップ画面.html">HOME</a>｜
@@ -44,24 +44,29 @@
 			<br><br><br>
 			<div>
 				<form>
-				<input id="parent_fname", type="txet" name="parent_fname"  value="" /><br>
-				<input type="txet" name="parent_lname"  value="" /><br>
-				<input type="txet" name="parent_method"  value="" /><br>
-				<input type="txet" name="parent_zipcode"  value="" /><br>
-				<input type="txet" name="parent_addr"  value="" /><br>
-				<input type="txet" name="parent_email"  value="" /><br>
+					<input id="pid" type="txet" name="parent_id" value="" /><br/>
+					<input id="parent_fname" type="txet" name="parent_fname"  value="" />
+					<input id="parent_lname" type="txet" name="parent_lname"  value="" /><br>
+					<input id="parent_method" type="txet" name="parent_method"  value="" /><br>
+					〒<input id="parent_zipcode" type="txet" name="parent_zipcode"  value="" /><br>
+					<input id="parent_addr" type="txet" name="parent_addr"  value="" /><br>
+					<input id="parent_email" type="txet" name="parent_email"  value="" /><br>
 	<ul class='label'></ul>
 	<ul class='list children-list'></ul>
 				<input type="button" value="更新" onclick="updateParent()">
 				</form>
 				<script type="text/javascript">
-					function test(id){
-						
-						$('.select-parent-id').empty();
-						$('.select-parent-id').append(id);
-
-					}
 					function updateParent(){
+						/*
+						var pid = document.getElementById('pid').value;
+						parents[pid-1].id = pid
+						parents[pid-1].firstName = document.getElementById('parent_fname').value;
+						parents[pid-1].lastNamedocument.getElementById('parent_lname').value;
+						parents[pid-1].method = document.getElementById('parent_method').value; 
+						parents[pid-1].ZIPCode = document.getElementById('parent_zipcode').value;
+						parents[pid-1].Addr = document.getElementById('parent_addr').value; 
+						parents[pid-1].email = document.getElementById('parent_email').value; 
+						*/
 					}
 	            </script>
 				

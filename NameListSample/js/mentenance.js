@@ -21,7 +21,13 @@
 
 		var parentService = new ParentService();
 		var parents = parentService.getAll();
-		document.getElementById('parent_fname').value = parents[pid-1].firstName + " " + parents[pid-1].lastName;
+        document.getElementById('pid').value = parents[pid-1].id;
+		document.getElementById('parent_fname').value = parents[pid-1].firstName;
+        document.getElementById('parent_lname').value = parents[pid-1].lastName;
+        document.getElementById('parent_method').value = parents[pid-1].method; 
+        document.getElementById('parent_zipcode').value = parents[pid-1].ZIPCode;
+        document.getElementById('parent_addr').value = parents[pid-1].Addr; 
+        document.getElementById('parent_email').value = parents[pid-1].email; 
     }
 
 (function () {
