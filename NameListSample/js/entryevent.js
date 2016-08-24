@@ -4,8 +4,10 @@ var a = 0;
 
 //データを保存する
 function set() {
-  a++;
-  var key = "event"
+  
+  //var key = "event3";
+  var key = String(a);
+  //a++;
   var date = document.forms.id_form1.Edate.value;
   var Ename = document.forms.id_form1.Ename.value;
   var Eplace = document.forms.id_form1.place.value;
