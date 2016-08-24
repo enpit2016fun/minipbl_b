@@ -30,26 +30,28 @@
 			<a href="contents01.html">コンテンツ4</a>｜
 			<a href="contents01.html">メニューは増減が可能です</a>｜
 		</div>
-
 		<div id="contents">
-
 			<div class='search-view'>
-				<input class='search-key' type="search" placeholder="Enter parent id"/>
+				<input class='search-key' type="search" placeholder="メールアドレスで絞込" />
 				<ul class='list parent-list'></ul>
 				<ul class='select-parent-id'></ul>
 				<ul class='one-parent'></ul>
+<!--
 				<ul class='label'></ul>
 				<ul class='list children-list'></ul>
+-->
 			</div>
+			<br><br><br>
 			<div>
 				<form>
-				<input type="txet" name="parent_fname"  value="" /><br>
+				<input id="parent_fname", type="txet" name="parent_fname"  value="" /><br>
 				<input type="txet" name="parent_lname"  value="" /><br>
 				<input type="txet" name="parent_method"  value="" /><br>
 				<input type="txet" name="parent_zipcode"  value="" /><br>
 				<input type="txet" name="parent_addr"  value="" /><br>
 				<input type="txet" name="parent_email"  value="" /><br>
-				
+	<ul class='label'></ul>
+	<ul class='list children-list'></ul>
 				<input type="button" value="更新" onclick="updateParent()">
 				</form>
 				<script type="text/javascript">
@@ -60,7 +62,6 @@
 
 					}
 					function updateParent(){
-
 					}
 	            </script>
 				

@@ -1,4 +1,29 @@
 ﻿// We use an "Immediate Function" to initialize the application to avoid leaving anything behind in the global scope
+
+//function findByParentId(pid) {
+//	alert(pid);
+//}
+
+    function findByParentId(pid) {
+		var childService = new ChildService();
+		var children = childService.getAll()
+        var l = children.length;
+        var c;
+        $('.label').empty();
+        $('.label').append('<br/>お子様')
+        $('.children-list').empty();
+        for (var i = 0; i < l; i++) {
+			c = children[i];
+			if (c.parent_id == pid ) {
+				$('.children-list').append('<li>' + c.id + c.firstName + ' ' + c.lastName + '<br/> 入園年' + c.enter_year + '<br/> 卒園年' + c.grad_year + '</li><br/>');
+            }
+        };
+
+		var parentService = new ParentService();
+		var parents = parentService.getAll();
+		document.getElementById('parent_fname').value = parents[pid-1].firstName + " " + parents[pid-1].lastName;
+    }
+
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
@@ -15,9 +40,10 @@
     /* --------------------------------- Event Registration -------------------------------- */
     // メールアドレス検索キーワード（一文字）の入力時に動くメソッドの登録
     $('.search-key').on('keyup', findByEmail);
-    $('.search-key').on('keyup', findById);
-    $('.search-key').on('keyup', findByParentId);
+    //$('.search-key').on('keyup', findById);
+    //$('.search-key').on('keyup', findByParentId);
 
+/*
 	// 保護者レコードの追加例（追加ボタンを押すと要素を追加する）
 	$('.add-parent-btn').on('click', function() {
 		parents = service.getAll();
@@ -30,8 +56,11 @@
 		service.putALL(parents)
     });
 	
-
+*/
     /* ---------------------------------- Local Functions ---------------------------------- */
+	//function findByParentId(pid) {
+	//	alert(pid);
+	//}
     function findByEmail() {
         parentService.findByEmail($('.search-key').val()).done(function (parent) {
             var l = parent.length;
@@ -39,7 +68,7 @@
             $('.parent-list').empty();
             for (var i = 0; i < l; i++) {
                 p = parent[i];
-                $('.parent-list').append('<li><a href="javascript:test(' + p.id + ');">' + p.firstName + ' ' + p.lastName +'</a>' + ' : ' + p.email + ' ' + '</li>');
+                $('.parent-list').append('<li><a href="javascript:findByParentId(' + p.id + ');">' + p.firstName + ' ' + p.lastName +'</a>' + ' : ' + p.email + ' ' + '</li>');
             }
         });
     }
@@ -51,7 +80,7 @@
 
         });
     }
-
+/*
     function findByParentId() {
         childService.findByParentId($('.search-key').val()).done(function (children) {
             var l = children.length;
@@ -65,5 +94,22 @@
             }
         });
     }
+*/
+
+/*
+    function findByParentId(pid) {
+alert("Enter findByParentId");
+        var children = ChildService.GetAll()
+        var l = children.length;
+        var c;
+        $('.label').empty();
+        $('.label').append('<br/>園児');
+        $('.children-list').empty();
+        for (var i = 0; i < l; i++) {
+        	c = children[i];
+            $('.children-list').append('<li>' + c.id + c.firstName + ' ' + c.lastName + '<br/> 入園年' + c.enter_year + '<br/> 卒園年' + c.grad_year + '</li>');
+		}
+    }
+*/
 
 }());

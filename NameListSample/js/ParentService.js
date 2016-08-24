@@ -19,8 +19,8 @@
                 {"id": 1, "firstName": "亀田", "lastName": "鶴子", "Addr": "函館市亀田中野町1－1", "ZIPCode": "123-4567","email": "KameTusu@fakemail.com", "method": "郵送", "pic": "James_King.jpg", "targetd": 1},
                 {"id": 2, "firstName": "田中", "lastName": "将大", "Addr": "函館市亀田中野町2－2", "ZIPCode": "234-5678","email": "YankeesTanaka@fakeemail.com", "method": "電子メール", "pic": "Julie_Taylor.jpg", "targetd": 1},
 				{"id": 3, "firstName": "中野", "lastName": "信子", "Addr": "函館市亀田中野町3－3", "ZIPCode": "345-6789","email": "BrainScientist@fakeemail.com", "method": "配信不要", "pic": "Eugene_Lee.jpg", "targetd": 1},
-				{"id": 4, "firstName": "朝", "lastName": "市子", "Addr": "函館市亀田中野町4－4", "ZIPCode": "456-7890","email": "KaniIka@fakeemail.com", "method": "配信不要", "pic": "Eugene_Lee.jpg", "targetd": 1},
-				{"id": 5, "firstName": "中島", "lastName": "廉", "Addr": "函館市亀田中野町5－5", "ZIPCode": "567-8901","email": "SakanaYasai@fakeemail.com", "method": "配信不要", "pic": "Eugene_Lee.jpg", "targetd": 1},
+				{"id": 4, "firstName": "朝", "lastName": "市子", "Addr": "函館市亀田中野町4－4", "ZIPCode": "456-7890","email": "KaniIka@fakeemail.com", "method": "郵送", "pic": "Eugene_Lee.jpg", "targetd": 1},
+				{"id": 5, "firstName": "中島", "lastName": "廉", "Addr": "函館市亀田中野町5－5", "ZIPCode": "567-8901","email": "SakanaYasai@fakeemail.com", "method": "電子メール", "pic": "Eugene_Lee.jpg", "targetd": 1},
 				{"id": 6, "firstName": "土筆", "lastName": "紀子", "Addr": "函館市亀田中野町6－6", "ZIPCode": "678-9012","email": "TsukushiNoko@fakeemail.com", "method": "配信不要", "pic": "Eugene_Lee.jpg", "targetd": 1},
             ]
         ));
