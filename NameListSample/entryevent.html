@@ -3,16 +3,42 @@
 <head>
 <script src="js/entryevent.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>イベント情報登録</title>
-
+<title>メール送信画面</title>
+<meta name="keywords" content="ホームページのキーワードを入れてください" />
+<meta name="description" content="ホームページの紹介文を入れてください" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
 <!-- 外部CSS読み込み -->
-<link href="assets/css/entryevent.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/default2.css" rel="stylesheet" type="text/css" />
 <!-- /ここまで -->
+
 </head>
 
-<form method="post" action="#" class="contact" id="id_form1">
+<body>
 
-<p>以下のフォームにイベント情報をご入力ください。</p>
+	<div id="container">
+
+		<div id="head">
+			<!--<h1>キーワードをいれてください</h1>-->
+			<h2><a href="./">子供確認画面</a></h2>
+		</div>
+		<div id="head_menu">
+			<a href="トップ画面.html">HOME</a>｜
+			<a href="contents01.html">コンテンツ1</a>｜
+			<a href="contents01.html">コンテンツ2</a>｜
+			<a href="contents01.html">コンテンツ3</a>｜
+			<a href="contents01.html">コンテンツ4</a>｜
+			
+		</div>
+
+
+			
+			<form method="post" action="#" class="contact" id="id_form1">
+
+<br>
+<p>　以下のフォームにイベント情報をご入力ください。</p>
+<br>
 
 
 <table>
@@ -49,6 +75,17 @@
 <div id="show_result"></div>
 
 </form>
+
+			<!--<script src="cordova.js"></script>-->
+			<script src="lib/jquery.js"></script>
+			<script src="js/ChildService.js"></script>
+			<script src="js/appChild.js"></script>
+		</div>
+
+		</div><!-- contents end -->
+	</div><!-- container end -->
+
+	<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>
 
 </body>
 </html>
