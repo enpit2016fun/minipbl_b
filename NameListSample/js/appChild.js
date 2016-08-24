@@ -2,29 +2,35 @@
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
-    // ParentService(js/ParentService.js)オブジェクトの生成
+    // ChildService(js/ChildService.js)オブジェクトの生成
     var service = new ChildService();
+
     service.initialize().done(function () {
         console.log("Service initialized");
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
-    // メールアドレス検索キーワード（一文字）の入力時に動くメソッドの登録
+    // 保護者ID（一文字）の入力時に動くメソッドの登録
     $('.search-key').on('keyup', findByParentId);
 /*
-	// 保護者レコードの追加例（追加ボタンを押すと要素を追加する）
-	$('.add-parent-btn').on('click', function() {
-		parents = service.getAll();
-		l = parents.length;
-		var new_elt = $.extend(true, {}, parents[l-1]);
+	// 園児レコードの追加例（追加ボタンを押すと要素を追加する）
+	$('.add-child-btn').on('click', function() {
+		children = service.getAll();
+		l = childs.length;
+		var new_elt = $.extend(true, {}, children[l-1]);
 		new_elt.id = l+1;
-		new_elt.firstName ="星野";
-		new_elt.lastName = new_elt.id + "郎";
-		parents.push(new_elt);
-		service.putALL(parents)
+		new_elt.parent_id = 6;
+		new_elt.firstName ="土筆";
+		new_elt.lastName = "の子"+new_elt.id;
+		childs.push(new_elt);
+		service.putAll(children)
     });
-	
 */
+	// 園児者データの初期化
+	$('.ChildInit-btn').on('click', function() {
+		service.dataInitialize();
+    });
+
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByParentId() {
         service.findByParentId($('.search-key').val()).done(function (child) {
