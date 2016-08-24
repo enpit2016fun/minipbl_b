@@ -1,23 +1,40 @@
-// We use an "Immediate Function" to initialize the application to avoid leaving anything behind in the global scope
+ï»¿// We use an "Immediate Function" to initialize the application to avoid leaving anything behind in the global scope
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
-    // ParentService(js/ParentService.js)ƒIƒuƒWƒFƒNƒg‚Ì¶¬
+    // ParentService(js/ParentService.js)ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ç”Ÿæˆ
     var service = new ParentService();
+
     service.initialize().done(function () {
         console.log("Service initialized");
     });
-
     /* --------------------------------- Event Registration -------------------------------- */
-    // ƒ[ƒ‹ƒAƒhƒŒƒXŒŸõƒL[ƒ[ƒhiˆê•¶šj‚Ì“ü—Í‚É“®‚­ƒƒ\ƒbƒh‚Ì“o˜^
+    // ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹æ¤œç´¢ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ï¼ˆä¸€æ–‡å­—ï¼‰ã®å…¥åŠ›æ™‚ã«å‹•ããƒ¡ã‚½ãƒƒãƒ‰ã®ç™»éŒ²
     $('.search-key').on('keyup', findByEmail);
-	
+
+	// ä¿è­·è€…ãƒ¬ã‚³ãƒ¼ãƒ‰ã®è¿½åŠ ä¾‹ï¼ˆè¿½åŠ ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨è¦ç´ ã‚’è¿½åŠ ã™ã‚‹ï¼‰
+	$('.add-parent-btn').on('click', function() {
+		parents = service.getAll();
+		l = parents.length;
+		var new_elt = $.extend(true, {}, parents[l-1]);
+		new_elt.id = l+1;
+		new_elt.firstName ="ã¤ãã—ã®å­";
+		new_elt.lastName = "ä¿è­·è€…æ§˜" + new_elt.id;
+		new_elt.email = "TsukushiNoko" + new_elt.id + "@fakeemail.com";
+		parents.push(new_elt);
+		service.putAll(parents)
+    });
+
+	// ä¿è­·è€…ãƒ‡ãƒ¼ã‚¿ã®åˆæœŸåŒ–
+	$('.dataInit-btn').on('click', function() {
+		service.dataInitialize();
+    });
 
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByEmail() {
         service.findByEmail($('.search-key').val()).done(function (parent) {
             var l = parent.length;
-            var e;
+            var p;
             $('.parent-list').empty();
             for (var i = 0; i < l; i++) {
                 p = parent[i];
