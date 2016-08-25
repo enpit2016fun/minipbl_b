@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宛先リスト表示画面</title>
+<meta name="keywords" content="ホームページのキーワードを入れてください" />
+<meta name="description" content="ホームページの紹介文を入れてください" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<!-- 外部CSS読み込み -->
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<!-- /ここまで -->
+</head>
+
+<body>
+
+<Div Align="center">
+<p><img src="assets/img/common/cool_02bk.lzh.gif" alt="サンプル画像" width="1000" height="150" /></p>
+<p><img src="assets/img/common/bg_menu.jpg" alt="サンプル画像" width="800" height="20" /></p>
+
+
+  <div id="container">
+
+    <div id="head">
+      <h1>メール送信</h1>
+     <!-- <h2>イベント</h2> -->
+<table cellspacing="10">
+  
+  <thead style="background:#ffccff">
+   <tr>
+    <th>イベント名</th>
+    <th>日時</th>
+    <th>場所</th>
+    <th>説明文</th>
+   </tr>
+  </thead>
+  <tfoot style="background:#eeeeee">
+   <tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+   </tr>
+  </tfoot>
+  <tbody>
+   
+  <!-- <tr>
+   <form method="get" action="sendmail_result.html">
+    <td><p><input type="text" readonly="readonly" name="event" value="バザー" /></p></td>
+    <td><p><input type="text" readonly="readonly" name="time" value="6月19日(日)" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="place" value="○○小学校" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="detail" value="あああああああああああああ" /></p></td>
+    </form>
+    </tr>
+    -->
+
+ <tr>
+   <form method="post" action="mail.html">
+    <td><p><CENTER>つくしっ子まつり</CENTER></p></td>
+    <td><p><CENTER>2016-09-10</CENTER></p></td>
+    <td><p><CENTER>○○小学校</CENTER></p></td>
+    <td><p><CENTER>みんなで楽しみましょう！</CENTER></p></td>
+    </form>
+   </tr>
+
+
+</tbody>
+</table>
+
+
+    </div>
+    
+    <div id="contents">
+
+    <h3>宛先リスト</h3>
+    <p><CENTER>亀田　鶴子:KameTusu@fakemail.com</CENTER></p>
+    <p><CENTER>田中　将大:YankeesTanaka@fakemail.com</CENTER></p>
+    <p><CENTER>中野　信子:BrainScientist@fakemail.com</CENTER></p>
+    <p><CENTER>朝　市子:Kanilka@fakemail.com</CENTER></p>
+    <p><CENTER>中島　廉:SakanaYasai@fakemail.com</CENTER></p>
+    <p><CENTER>土筆　紀子:TsukushiNoko@fakemail.com</CENTER></p>
+    
+
+
+    <!-- <p><input type="submit" value="確認"></p> -->
+
+
+<!--メーラー起動-->
+<!--
+<p><a href="mailto:KameTusu@fakemail.com,YankeesTanaka@fakemail.com,BrainScientist@fakemail.com,Kanilka@fakemail.com,SakanaYasai@fakemail.com,TsukushiNoko@fakemail.com?subject=つくしの子保育園：つくしっ子まつり&amp;body=
+イベント名:つくしっ子まつり%0d%0a
+日時：2016-09-10　%0d%0a
+場所：○○小学校%0d%0a
+説明文：みんなで楽しみましょう！%0d%0a
+%0d%0a
+＜本文＞
+">
+<input type="submit" value="確認"></p></a>
+-->
+
+
+<!--メーラー起動文字化け対策-->
+   
+   <a href="mailto:KameTusu@fakemail.com,YankeesTanaka@fakemail.com,BrainScientist@fakemail.com,Kanilka@fakemail.com,SakanaYasai@fakemail.com,TsukushiNoko@fakemail.com?subject=%82%c2%82%ad%82%b5%82%cc%8eq%95%db%88%e7%89%80%81F%82%c2%82%ad%82%b5%82%c1%8eq%82%dc%82%c2%82%e8&amp;body=
+%83C%83x%83%93%83g%96%bc%3a%82%c2%82%ad%82%b5%82%c1%8eq%82%dc%82%c2%82%e8 %0d%0a
+%93%fa%8e%9e%81F2016%2d09%2d10 %0d%0a
+%8f%ea%8f%8a%81F%81%9b%81%9b%8f%ac%8aw%8dZ %0d%0a
+%90%e0%96%be%95%b6%81F%82%dd%82%f1%82%c8%82%c5%8ay%82%b5%82%dd%82%dc%82%b5%82%e5%82%a4%81I %0d%0a
+%0d%0a
+%81%83%96%7b%95%b6%81%84
+
+">
+<input type="submit" value="送信画面"></a>
+
+
+      
+<input type="submit" onclick="location.href='listmentenance.html'" value="宛先編集" />
+<input type="submit" onclick="location.href='TOP.html'" value="HOME" />
+
+
+
+    </div><!-- contents end -->
+  </div><!-- container end -->
+
+  <!--<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>  -->
+  </Div>
+
+</body>
+</html>
