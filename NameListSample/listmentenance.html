@@ -20,15 +20,14 @@
 
 		<div id="head">
 			<!--<h1>キーワードをいれてください</h1>-->
-			<h2><a href="./">確認画面</a></h2>
+			<h2><a href="./">名簿メンテナンス</a></h2>
 		</div>
 		<div id="head_menu">
-			<a href="トップ画面.html">HOME</a>｜
-			<a href="contents01.html">コンテンツ1</a>｜
-			<a href="contents01.html">コンテンツ2</a>｜
-			<a href="contents01.html">コンテンツ3</a>｜
-			<a href="contents01.html">コンテンツ4</a>｜
-			<a href="contents01.html">メニューは増減が可能です</a>｜
+			<a href="TOP.html">HOME</a>｜
+			<a href="entryevent.html">イベント情報登録</a>｜
+			<a href="sendmail.html">メール送信画面</a>｜
+			<a href="changeevent.html">イベントの変更</a>｜
+			<a href="listmentenance.html">名簿メンテナンス</a>｜
 		</div>
 		<div id="contents">
 			<div class='search-view'>
@@ -38,19 +37,26 @@
 			<br><br><br>
 			<div>
 				<form>
-					<input id="pid" type="txet" name="parent_id" value="" /><br/>
+					<input id="pid" type="hidden" name="parent_id" value="" /><br/>
+					氏　名
 					<input id="parent_fname" type="txet" name="parent_fname"  value="" />
 					<input id="parent_lname" type="txet" name="parent_lname"  value="" /><br>
+					通　知
 					<input id="parent_method" type="txet" name="parent_method"  value="" /><br>
-					〒<input id="parent_zipcode" type="txet" name="parent_zipcode"  value="" /><br>
+					〒
+					<input id="parent_zipcode" type="txet" name="parent_zipcode"  value="" /><br>
+					住　所
 					<input id="parent_addr" type="txet" name="parent_addr"  value="" /><br>
+					メール
 					<input id="parent_email" type="txet" name="parent_email"  value="" /><br>
 
+					<p><button class="updateParent">更新</button>
+					<button class="insertParent">保護者の追加</button>
+					<button class="returnParent">戻る</button></p>
 					<ul class='label'></ul>
 					<ul class='list children-list'></ul>
-					<p><button class="updateParent">更新</button>
-					<button class="insertParent">追加</button>
-					<button class="returnParent">戻る</button></p>
+					<p><ul class='add-child'><ul></p>
+					
 				</form>
 			</div>
 

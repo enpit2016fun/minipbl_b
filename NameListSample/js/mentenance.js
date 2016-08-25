@@ -18,6 +18,8 @@
 				$('.children-list').append('<li><a href="childmente.html?childid=' + c.id + '">' + c.firstName + ' ' + c.lastName + '</a><br/> 入園年' + c.enter_year + '<br/> 卒園年' + c.grad_year + '</li><br/>');
             }
         };
+        $('.add-child').empty();
+        $('.add-child').append('<li><a href="childmente.html?parentid=' + pid + '">お子様の追加</a></li>');
 
 		var parentService = new ParentService();
 		var parents = parentService.getAll();

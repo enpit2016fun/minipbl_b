@@ -3,13 +3,21 @@
 	(function(){
 		
 		var childService = new ChildService();
-		var child =  childService.findById(childid);
-		document.getElementById('cid').value = child.id;
-		document.getElementById('pid').value = child.parent_id;
-		document.getElementById('child_fname').value = child.firstName;
-		document.getElementById('child_lname').value = child.lastName;
-		document.getElementById('enter_year').value = child.enter_year;
-		document.getElementById('grad_year').value = child.grad_year;
+		var parentService = new ParentService();
+		if(childid != null){
+			var child =  childService.findById(childid);
+			document.getElementById('cid').value = child.id;
+			document.getElementById('pid').value = child.parent_id;
+			document.getElementById('child_fname').value = child.firstName;
+			document.getElementById('child_lname').value = child.lastName;
+			document.getElementById('enter_year').value = child.enter_year;
+			document.getElementById('grad_year').value = child.grad_year;
+		}else if(parentid != null){
+			var parent = parentService.findById(parentid);
+			document.getElementById('pid').value = parentid;
+			document.getElementById('child_fname').value = parent.firstName;
+			document.getElementById('child_lname').value = "";
+		}
 	}());
 
 	// 園児レコードの変更
@@ -33,11 +41,11 @@
 	$('.insertChild').on('click', function() {
 						var childService = new ChildService();
 						var children = childService.getAll();
-						var cid = document.getElementById('cid').value;
 						l = children.length;
 						var new_elt= $.extend(true, {}, children[l-1]);
 						new_elt.id = l+1;
-						new_elt.parent_id = document.getElementById('pid').value;
+						//new_elt.parent_id = document.getElementById('pid').value;
+						new_elt.parent_id = parentid;
 						new_elt.firstName = document.getElementById('child_fname').value;
 						new_elt.lastName = document.getElementById('child_lname').value;
 						new_elt.enter_year = document.getElementById('enter_year').value;
