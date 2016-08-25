@@ -34,12 +34,6 @@
 			<div class='search-view'>
 				<input class='search-key' type="search" placeholder="メールアドレスで絞込" />
 				<ul class='list parent-list'></ul>
-				<ul class='select-parent-id'></ul>
-				<ul class='one-parent'></ul>
-<!--
-				<ul class='label'></ul>
-				<ul class='list children-list'></ul>
--->
 			</div>
 			<br><br><br>
 			<div>
@@ -51,31 +45,20 @@
 					〒<input id="parent_zipcode" type="txet" name="parent_zipcode"  value="" /><br>
 					<input id="parent_addr" type="txet" name="parent_addr"  value="" /><br>
 					<input id="parent_email" type="txet" name="parent_email"  value="" /><br>
-	<ul class='label'></ul>
-	<ul class='list children-list'></ul>
-				<input type="button" value="更新" onclick="updateParent()">
+
+					<ul class='label'></ul>
+					<ul class='list children-list'></ul>
+					<p><button class="updateParent">更新</button>
+					<button class="insertParent">追加</button>
+					<button class="returnParent">戻る</button></p>
 				</form>
-				<script type="text/javascript">
-					function updateParent(){
-						/*
-						var pid = document.getElementById('pid').value;
-						parents[pid-1].id = pid
-						parents[pid-1].firstName = document.getElementById('parent_fname').value;
-						parents[pid-1].lastNamedocument.getElementById('parent_lname').value;
-						parents[pid-1].method = document.getElementById('parent_method').value; 
-						parents[pid-1].ZIPCode = document.getElementById('parent_zipcode').value;
-						parents[pid-1].Addr = document.getElementById('parent_addr').value; 
-						parents[pid-1].email = document.getElementById('parent_email').value; 
-						*/
-					}
-	            </script>
-			
 			</div>
 
 			
 			<!--<script src="cordova.js"></script>-->
 			<script src="lib/jquery.js"></script>
 			<script src="js/ParentService.js"></script>
+			<script src="js/Parentmente.js"></script>
 			<script src="js/ChildService.js"></script>
 			<script src="js/Childmente.js"></script>
 			<script src="js/mentenance.js"></script>
