@@ -16,7 +16,166 @@
 
 <body>
 
+
+<Div Align="center">
+
+<p><img src="assets/img/common/cool_02bk.lzh.gif" alt="サンプル画像" width="1000" height="150" /></p>
+<p><img src="assets/img/common/bg_menu.jpg" alt="サンプル画像" width="800" height="20" /></p>
+
+
 	<div id="container">
+	
+<!--
+				
+				<table cellspacing="10">
+  <caption>メール送信：イベント選択</caption>
+  <thead style="background:#ffccff">
+   <tr>
+    <th>イベント名</th>
+    <th>日時</th>
+    <th>場所</th>
+    <th>説明文</th>
+    <th>選択</th>
+   </tr>
+  </thead>
+  <tfoot style="background:#eeeeee">
+   <tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+   </tr>
+  </tfoot>
+  <tbody>
+   <tr>
+   <form method="get" action="mail.html">
+    <td><p><input type="text" name="event"></p></td>
+    <td><p><input type="text" name="time"></p></td>
+    <td><p><input type="text" name="place"></p></td>
+    <td><p><input type="text" name="detail"></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+   <tr>
+    <form method="get" action="mail.html">
+    <td><p><input type="text" name="event"></p></td>
+    <td><p><input type="text" name="time"></p></td>
+    <td><p><input type="text" name="place"></p></td>
+    <td><p><input type="text" name="detail"></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+   <tr>
+  <form method="get" action="mail.html">
+    <td><p><input type="text" name="event"></p></td>
+    <td><p><input type="text" name="time"></p></td>
+    <td><p><input type="text" name="place"></p></td>
+    <td><p><input type="text" name="detail"></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+   <tr>
+   <form method="get" action="mail.html">
+    <td><p><input type="text" name="event"></p></td>
+    <td><p><input type="text" name="time"></p></td>
+    <td><p><input type="text" name="place"></p></td>
+    <td><p><input type="text" name="detail"></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+  </tbody>
+</table>
+
+-->
+
+
+
+<!--決め打ち用フォーム-->
+
+<!-- <table cellspacing="10"> -->
+<table>
+  <caption>メール送信：イベント選択</caption>
+  <thead style="background:#ffccff">
+   <tr>
+    <th>イベント名</th>
+    <th>日時</th>
+    <th>場所</th>
+    <th>説明文</th>
+    <th>選択</th>
+   </tr>
+  </thead>
+  <tfoot style="background:#eeeeee">
+   <tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+   </tr>
+  </tfoot>
+  <tbody>
+   
+   <tr>
+   <form method="get" action="sendmail_result.html">
+    <td><p><input type="text" readonly="readonly" name="event" value="バザー" /></p></td>
+    <td><p><input type="text" readonly="readonly" name="time" value="6月19日(日)" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="place" value="○○小学校" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="detail" value="あああああああああああああ" /></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+   
+
+  <tr>
+   <form method="get" action="sendmail_result.html">
+    <td><p><input type="text" readonly="readonly" name="event" value="つくしっ子まつり" /></p></td>
+    <td><p><input type="text" readonly="readonly" name="time" value="9月10日(土)" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="place" value="○○小学校" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="detail" value="いいいいいいいいいいいいい" /></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+
+
+
+
+
+<tr>
+   <form method="get" action="sendmail_result.html">
+    <td><p><input type="text" readonly="readonly" name="event" value="運動会" /></p></td>
+    <td><p><input type="text" readonly="readonly" name="time" value="10月02日(日)" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="place" value="○○小学校" /></p></td>
+   <td><p><input type="text" readonly="readonly" name="detail" value="ううううううううううううううううう" /></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+   </table>
+
+
+
+<!--
+   <tr>
+   <form method="post" action="mail.html">
+    <td><p><CENTER>運動会</CENTER></p></td>
+    <td><p><CENTER>10月02日(日)</CENTER></p></td>
+    <td><p><CENTER>○○小学校</CENTER></p></td>
+    <td><p><CENTER>ううううううううううううううううう</CENTER></p></td>
+    <td><p><input type="submit" value="選択"></p></td>
+    </form>
+   </tr>
+  </tbody>
+
+
+-->
+
+
+
+
+
+
+
+
 
 		<div id="head">
 			<!--<h1>キーワードをいれてください</h1>-->
@@ -122,10 +281,15 @@
 				</div>
 			</div>
 -->
+
 		</div><!-- contents end -->
 	</div><!-- container end -->
 
-	<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> サイト名を入れてください. All Rights Reserved.</div>
+	<!--<div id="copy">Copyright (C) <script language="javascript">document.write(new Date().getFullYear())</script> つくしの子保育園イベント. All Rights Reserved.</div>
+	-->
+
+	</Div>
+
 
 </body>
 </html>
