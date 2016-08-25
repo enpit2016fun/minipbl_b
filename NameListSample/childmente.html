@@ -20,7 +20,7 @@
 
 		<div id="head">
 			<!--<h1>キーワードをいれてください</h1>-->
-			<h2><a href="./">お子様情報確認・修正</a></h2>
+			<h2><a href="./">お子様情報</a></h2>
 		</div>
 		<div id="head_menu">
 			<a href="トップ画面.html">HOME</a>｜
@@ -30,22 +30,42 @@
 			<a href="contents01.html">コンテンツ4</a>｜
 			<a href="contents01.html">メニューは増減が可能です</a>｜
 		</div>
-
 		<div id="contents">
 
-			<p><button class="ChildInit-btn">お子様データ初期化</button></p>
-			<div class='search-view'>
-				<input class='search-key' type="search" placeholder="Enter parent id"/>
-				<br><br>
-				<ul class='text parent-info'></ul>
-				<ul class='list children-list'></ul>
-			</div>
 
-			<!--<script src="cordova.js"></script>-->
+<script type="text/javascript">
+	var urlPrm = new Object;
+	var urlSearch = location.search.substring(1).split('&');
+	for(i=0;urlSearch[i];i++) {
+		var kv = urlSearch[i].split('=');
+		urlPrm[kv[0]]=kv[1];
+	}
+	var childid = urlPrm.childid
+</script>
+
+			<div>
+				<form>
+				お名前
+				<input id="child_fname" type="text" name="child_fname"  value="" />
+				<input id="child_lname" type="text" name="child_lname"  value="" /> <br/>
+				入園年
+				<input id="enter_year" type="number" name="enter_year"  value="" /><br/>
+				卒園年
+				<input id="grad_year" type="number" name="grad_year"  value="" /><br/>
+				<input id="cid" type="hidden" name="cid"  value="" /><br/>
+				<input id="pid" type="hidden" name="pid"  value="" /><br/>
+				<ul class='label'></ul>
+				<ul class='list children-list'></ul>
+				<p><button class="updatetChild">更新</button>
+				<button class="insertChild">追加</button>
+				<button class="returnChild">戻る</button></p>
+				</form>
+			</div>
+			<!--<script src="cordova.js">-->
 			<script src="lib/jquery.js"></script>
 			<script src="js/ParentService.js"></script>
 			<script src="js/ChildService.js"></script>
-			<script src="js/appChild.js"></script>
+			<script src="js/Childmente.js"></script>
 		</div>
 
 		</div><!-- contents end -->
