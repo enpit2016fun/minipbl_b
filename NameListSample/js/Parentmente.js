@@ -13,8 +13,8 @@
 						parents[pid-1].Addr = document.getElementById('parent_addr').value; 
 						parents[pid-1].email = document.getElementById('parent_email').value; 
 						parentService.putAll(parents);
-						//document.location.href = "listmentenance.html";
-						history.back();
+						document.location.href = "listmentenance.html";
+						//history.back();
 						return false;
 	});
 
@@ -33,8 +33,8 @@
 						new_elt.email = document.getElementById('parent_email').value;
 						parents.push(new_elt);
 						parentService.putAll(parents);
-						//document.location.href = "listmentenance.html";
-						history.back();
+						document.location.href = "listmentenance.html";
+						//history.back();
 						return false;
     });
 

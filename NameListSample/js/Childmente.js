@@ -32,8 +32,8 @@
 						children[cid-1].enter_year = document.getElementById('enter_year').value;
 						children[cid-1].grad_year = document.getElementById('grad_year').value;
 						childService.putAll(children);
-						//document.location.href = "childpage.html";
-						history.back();
+						document.location.href = "listmentenance.html";
+						//history.back();
 						return false;
 	});
 
@@ -52,8 +52,8 @@
 						new_elt.grad_year = document.getElementById('grad_year').value;
 						children.push(new_elt);
 						childService.putAll(children);
-						//document.location.href = "childpage.html";
-						history.back();
+						document.location.href = "listmentenance.html";
+						//history.back();
 						return false;
     });
 
