@@ -15,7 +15,7 @@
         for (var i = 0; i < l; i++) {
 			c = children[i];
 			if (c.parent_id == pid ) {
-				$('.children-list').append('<li>' + c.id + c.firstName + ' ' + c.lastName + '<br/> 入園年' + c.enter_year + '<br/> 卒園年' + c.grad_year + '</li><br/>');
+				$('.children-list').append('<li><a href="childmente.html?childid=' + c.id + '">' + c.firstName + ' ' + c.lastName + '</a><br/> 入園年' + c.enter_year + '<br/> 卒園年' + c.grad_year + '</li><br/>');
             }
         };
 
