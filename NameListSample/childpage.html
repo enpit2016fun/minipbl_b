@@ -20,27 +20,29 @@
 
 		<div id="head">
 			<!--<h1>キーワードをいれてください</h1>-->
-			<h2><a href="./">子供確認画面</a></h2>
+			<h2><a href="./">お子様情報確認・修正</a></h2>
 		</div>
 		<div id="head_menu">
-			<a href="トップ画面.html">HOME</a>｜
-			<a href="contents01.html">コンテンツ1</a>｜
-			<a href="contents01.html">コンテンツ2</a>｜
-			<a href="contents01.html">コンテンツ3</a>｜
-			<a href="contents01.html">コンテンツ4</a>｜
-			<a href="contents01.html">メニューは増減が可能です</a>｜
+			<a href="TOP.html">HOME</a>｜
+			<a href="entryevent.html">イベント情報登録</a>｜
+			<a href="sendmail.html">メール送信画面</a>｜
+			<a href="changeevent.html">イベントの変更</a>｜
+			<a href="listmentenance.html">名簿メンテナンス</a>｜
 		</div>
 
 		<div id="contents">
 
-			<p><button class="ChildInit-btn">データ初期化</button></p>
+			<p><button class="ChildInit-btn">お子様データ初期化</button></p>
 			<div class='search-view'>
 				<input class='search-key' type="search" placeholder="Enter parent id"/>
+				<br><br>
+				<ul class='text parent-info'></ul>
 				<ul class='list children-list'></ul>
 			</div>
 
 			<!--<script src="cordova.js"></script>-->
 			<script src="lib/jquery.js"></script>
+			<script src="js/ParentService.js"></script>
 			<script src="js/ChildService.js"></script>
 			<script src="js/appChild.js"></script>
 		</div>

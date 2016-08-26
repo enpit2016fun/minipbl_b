@@ -32,9 +32,11 @@
             parent = null,
             l = parents.length;
         for (var i = 0; i < l; i++) {
-            if (parents[i].id === id) {
+            if (parents[i].id == id) {
                 parent = parents[i];
-                break;
+                //break;
+
+				return parent;
             }
         }
 
