@@ -1,6 +1,6 @@
 //変数storageにlocalStorageを格納
 var storage = localStorage;
-var a = 0; 
+var a = 1; 
 
 //データを保存する
 function set() {

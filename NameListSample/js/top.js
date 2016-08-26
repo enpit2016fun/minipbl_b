@@ -17,7 +17,7 @@ function show_result() {
     //i番目のキーを取得
     var k = storage.key(i);
     
-    if(k == "0" ||  k == "event" ||  k == "event2" || k == "event3"){
+    if(k == "1" || k == "0" ||  k == "event" ||  k == "event2" || k == "event3"){
         //キーと値をコロン（：）区切りのテキストにする
        //result += k + "：" + storage.getItem(k) + "<br>";
         var Item = storage.getItem(k);
