@@ -13,6 +13,7 @@ function set() {
   var Eplace = document.forms.id_form1.place.value;
   var Emessage = document.forms.id_form1.Emessage.value;
   var event = date + ", " + Ename + ", " + Eplace + ", " + Emessage; 
+  
   storage.setItem(key, event);
   //show_result();
 }
@@ -43,7 +44,7 @@ function art(){
 	// 「OK」時の処理開始 ＋ 確認ダイアログの表示
 	if(window.confirm("イベントを登録してもよろしいですか？")){
 
-		location.href = "トップ画面.html"; // example_confirm.html へジャンプ
+		location.href = "TOP.html"; // example_confirm.html へジャンプ
 		set();
 	}
 
