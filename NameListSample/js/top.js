@@ -9,7 +9,7 @@ function show_result() {
   storage.setItem("event3", "2016-04-09,入園式,本保育園体育館,ご入園おめでとうございます。心より歓迎申し上げます。");
 
 //storage.clear();
-
+//localStorage.removeItem("0"); 
   
   //保存されているデータの数だけループ
   for(var i = 0; i < storage.length; i++){
