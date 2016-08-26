@@ -2,7 +2,7 @@
 <html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>メール送信画面</title>
+<title>名簿メンテナンス画面</title>
 <meta name="keywords" content="ホームページのキーワードを入れてください" />
 <meta name="description" content="ホームページの紹介文を入れてください" />
 <meta http-equiv="content-script-type" content="text/javascript" />
@@ -20,82 +20,53 @@
 
 		<div id="head">
 			<!--<h1>キーワードをいれてください</h1>-->
-			<h2><a href="./">確認画面</a></h2>
+			<h2><a href="./">名簿メンテナンス</a></h2>
 		</div>
 		<div id="head_menu">
-			<a href="トップ画面.html">HOME</a>｜
-			<a href="contents01.html">コンテンツ1</a>｜
-			<a href="contents01.html">コンテンツ2</a>｜
-			<a href="contents01.html">コンテンツ3</a>｜
-			<a href="contents01.html">コンテンツ4</a>｜
-			<a href="contents01.html">メニューは増減が可能です</a>｜
+			<a href="TOP.html">HOME</a>｜
+			<a href="entryevent.html">イベント情報登録</a>｜
+			<a href="sendmail.html">メール送信画面</a>｜
+			<a href="changeevent.html">イベントの変更</a>｜
+			<a href="listmentenance.html">名簿メンテナンス</a>｜
 		</div>
 		<div id="contents">
 			<div class='search-view'>
 				<input class='search-key' type="search" placeholder="メールアドレスで絞込" />
 				<ul class='list parent-list'></ul>
-				<ul class='select-parent-id'></ul>
-				<ul class='one-parent'></ul>
-<!--
-				<ul class='label'></ul>
-				<ul class='list children-list'></ul>
--->
 			</div>
 			<br><br><br>
 			<div>
 				<form>
-					<input id="pid" type="txet" name="parent_id" value="" /><br/>
+					<input id="pid" type="hidden" name="parent_id" value="" /><br/>
+					氏　名
 					<input id="parent_fname" type="txet" name="parent_fname"  value="" />
 					<input id="parent_lname" type="txet" name="parent_lname"  value="" /><br>
+					通　知
 					<input id="parent_method" type="txet" name="parent_method"  value="" /><br>
-					〒<input id="parent_zipcode" type="txet" name="parent_zipcode"  value="" /><br>
+					〒
+					<input id="parent_zipcode" type="txet" name="parent_zipcode"  value="" /><br>
+					住　所
 					<input id="parent_addr" type="txet" name="parent_addr"  value="" /><br>
+					メール
 					<input id="parent_email" type="txet" name="parent_email"  value="" /><br>
-	<ul class='label'></ul>
-	<ul class='list children-list'></ul>
-				<input type="button" value="更新" onclick="updateParent()">
+
+					<p><button class="updateParent">更新</button>
+					<button class="insertParent">保護者の追加</button>
+					<button class="returnParent">戻る</button></p>
+					<ul class='label'></ul>
+					<ul class='list children-list'></ul>
+					<p><ul class='add-child'><ul></p>
+					
 				</form>
-				<script type="text/javascript">
-					function updateParent(){
-						/*
-						var pid = document.getElementById('pid').value;
-						parents[pid-1].id = pid
-						parents[pid-1].firstName = document.getElementById('parent_fname').value;
-						parents[pid-1].lastNamedocument.getElementById('parent_lname').value;
-						parents[pid-1].method = document.getElementById('parent_method').value; 
-						parents[pid-1].ZIPCode = document.getElementById('parent_zipcode').value;
-						parents[pid-1].Addr = document.getElementById('parent_addr').value; 
-						parents[pid-1].email = document.getElementById('parent_email').value; 
-						*/
-					}
-	            </script>
-				
-				<!--
-				<script>
-					(function(){
-						
-						var $parent_attribute = new Array($one-parent);
-												alert("b");
-						document.write( '<ol>\n' );
-						for ( var $counterVar = 0; $counterVar < $parent_attribute.length; $counterVar++ ) {
-    						document.write( '<li>' );
-    						document.write( $parent_attribute[$counterVar] );
-   							document.write( '</li>\n' );
-						}
-					document.write( '</ol>' );
-					}());
-
-				</script>
-				-->
-
-				
 			</div>
 
 			
 			<!--<script src="cordova.js"></script>-->
 			<script src="lib/jquery.js"></script>
 			<script src="js/ParentService.js"></script>
+			<script src="js/Parentmente.js"></script>
 			<script src="js/ChildService.js"></script>
+			<script src="js/Childmente.js"></script>
 			<script src="js/mentenance.js"></script>
 		</div>
 

@@ -17,7 +17,7 @@
         window.localStorage.setItem("child", JSON.stringify(
             [
                 {"id": 1, "parent_id": "1", "firstName": "亀田", "lastName": "亀雄", "pic": "James_King.jpg", "enter_year": "2012", "grad_year": "2016"},
-                {"id": 2, "parent_id": "1", "firstName": "亀田", "lastName": "うさぎ", "pic": "Julie_Taylor.jpg", "enter_year": "2014", "grad_year": ""},
+                {"id": 2, "parent_id": "1", "firstName": "亀田", "lastName": "うさぎ", "pic": "Julie_Taylor.jpg", "enter_year": "2014", "grad_year": "2016"},
 				{"id": 3, "parent_id": "2", "firstName": "田中", "lastName": "佑典", "pic": "Eugene_Lee.jpg", "enter_year": "2009", "grad_year": "2014"},
                 {"id": 4, "parent_id": "3", "firstName": "中野", "lastName": "函", "pic": "Eugene_Lee.jpg", "enter_year": "1994", "grad_year": "1998"},
                 {"id": 5, "parent_id": "3", "firstName": "中野", "lastName": "舘", "pic": "Eugene_Lee.jpg", "enter_year": "2013", "grad_year": "2015"},
@@ -25,7 +25,7 @@
                 {"id": 7, "parent_id": "5", "firstName": "中島", "lastName": "茂", "pic": "Eugene_Lee.jpg", "enter_year": "2013", "grad_year": "2015"},
 				{"id": 8, "parent_id": "5", "firstName": "中島", "lastName": "寿子", "pic": "Eugene_Lee.jpg", "enter_year": "2015", "grad_year": "2017"},
 				{"id": 9, "parent_id": "5", "firstName": "中島", "lastName": "司", "pic": "Eugene_Lee.jpg", "enter_year": "2016", "grad_year": "2018"},
-				{"id": 10, "parent_id": "6", "firstName": "つくし", "lastName": "杉菜", "pic": "Eugene_Lee.jpg", "enter_year": "2016", "grad_year": "2018"},
+				{"id": 10, "parent_id": "6", "firstName": "土筆", "lastName": "杉菜", "pic": "Eugene_Lee.jpg", "enter_year": "2016", "grad_year": "2018"},
             ]
         ));
     }
@@ -38,9 +38,9 @@
             l = children.length;
 
         for (var i = 0; i < l; i++) {
-            if (children[i].id === id) {
+            if (children[i].id == id) {
                 child = children[i];
-                break;
+                return child;
             }
         }
 
@@ -79,4 +79,3 @@
 
 
 }
-
